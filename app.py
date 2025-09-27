@@ -21,9 +21,9 @@ response = requests.post(url, headers=headers, data=payload, files=files)
 
 jason_data = response.json()
 
-#if response.status_code == 200:
-#  print(response.status_code)
-#  print(jason_data["data"]["url"])
+if response.status_code == 200:
+  print(response.status_code)
+  print(jason_data["data"]["url"])
 
 
 if jason_data["err"] != "" and jason_data["err"] is not None:
