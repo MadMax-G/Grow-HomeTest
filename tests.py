@@ -24,6 +24,8 @@ jason_data = response.json()
 if response.status_code == 200:
   print(response.status_code)
   print(jason_data["data"]["url"])
+else:
+  print(response.status_code)
 
 if jason_data["err"] != "" and jason_data["err"] is not None:
   print(jason_data["err"]["message"])
